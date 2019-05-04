@@ -218,7 +218,9 @@ window.addEventListener('DOMContentLoaded', function () {
     close.addEventListener('click', function () {
         overlay.style.display = 'none';
         more.classList.remove('more-splash');
-        tabBtns[i].classList.remove('more-splash');
+        for (let i = 0; i < tabBtns.length; i++) {
+            tabBtns[i].classList.remove('more-splash');
+        }
         document.body.style.overflow = '';
     });
     // скрываем при нажатии в область вне модального окна
@@ -226,7 +228,9 @@ window.addEventListener('DOMContentLoaded', function () {
         if (event.target && !popup.contains(event.target)) {
             overlay.style.display = 'none';
             more.classList.remove('more-splash');
-            tabBtns[i].classList.remove('more-splash');
+            for (let i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove('more-splash');
+            }
             document.body.style.overflow = '';
         }
     });
