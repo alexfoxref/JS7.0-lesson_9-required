@@ -207,6 +207,7 @@ window.addEventListener('DOMContentLoaded', function () {
             if (event.target == more || event.target == tabBtns[i]) {
                 overlay.style.display = 'block';
                 more.classList.add('more-splash');
+                tabBtns[i].classList.add('more-splash');
                 //запрещаем прокрутку страницы
                 document.body.style.overflow = 'hidden';
             }
